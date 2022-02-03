@@ -2,12 +2,12 @@ def update_user(us, ue):
     """
     This function help you to update your data in account
     """
-    print(us)
+    # print(us)
     user_ue = input('Enter user email: ')
 
     if user_ue in ue:
-        print('password: ', us[user_ue]['password'])
-        print(us[user_ue])
+        # print('password: ', us[user_ue]['password'])
+        # print(us[user_ue])
         while True:
             user_p = input('Enter user password: ')
             if user_p == us[user_ue]['password']:
@@ -20,7 +20,7 @@ def update_user(us, ue):
                     idx = ue.index(user_ue)
                     ue[idx] = e
                     user_ue = e
-                    print(us)
+                    # print(us)
                     print('New Email:', user_ue)
                 n = input('Enter New Name: ')
                 if n.strip() == "" or len(n) == 0:
@@ -40,7 +40,7 @@ def update_user(us, ue):
                 else:
                     us[user_ue]['phone'] = ph
                     print('New Phone: ', us[user_ue]['phone'])
-                print(us)
+                print('Updated user: Email: "' + user_ue + '" User_info: ' + str(us[user_ue]))
                 break
             else:
                 print('Wrong password')
